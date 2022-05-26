@@ -1,4 +1,10 @@
-
+---
+title: “从源码编译安装OpenCV” #文章页面上的显示名称，一般是中文
+date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
+categories: OpenCV #分类
+tags: [OpenCV] #文章标签，可空，多标签请用格式，注意:后面有个空格
+description: 从源码编译安装OpenCV
+---
 
 ## 下载OpenCV源码
 
