@@ -111,3 +111,6 @@ server:
   port: 4001 #端口号随意，默认是4000
   compress: true
   header: true
+
+netlify_cms:
+  config_file: netlify.yaml
