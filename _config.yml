@@ -101,10 +101,9 @@ theme: hexo-theme-next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-#git@github.com:shoufei403/shoufei403.github.io.git
 deploy:
   type: 'git'
-  repo: https://github.com/shoufei403/shoufei403.github.io.git
+  repo: git@github.com:shoufei403/shoufei403.github.io.git
   branch: master
 
 server:
