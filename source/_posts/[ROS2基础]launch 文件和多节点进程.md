@@ -15,7 +15,7 @@ description: ROS2基础之launch文件和多节点进程
 
 [https://docs.ros.org/en/galactic/How-To-Guides/Launch-file-different-formats.html](https://docs.ros.org/en/galactic/How-To-Guides/Launch-file-different-formats.html)
 
-
+<!--more-->
 
 `launch`文件一般通过下面的命令启动：
 

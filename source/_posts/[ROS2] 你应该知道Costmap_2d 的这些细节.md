@@ -11,7 +11,7 @@ description: 你应该知道Costmap_2d 的这些细节
 ## Costmap_2d 的插件
 
 Costmap_2d 的插件都是继承于`CostmapLayer`。具体的关系如下图所示：  
-![](https://gitee.com/shoufei/blog_images/raw/master/20220402153032.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/8a2382c8a0130955c1bf576949b8ba4e.png)
 
 ### StaticLayer
 `StaticLayer`内主要是通过接收`map_server`发布的地图话题来加载静态地图的。所以`StaticLayer`内是可以在线更改静态地图的。
@@ -101,10 +101,10 @@ filter->registerCallback(
 这是Navigation2中新增加的一个costmap插件层，主要维护超声波的数据。它对超声波数据的模拟是用圆锥体有来表征超声波的检测空间。映射到costmap上时则是三角形。这可能是最接近超声波检测空间的规则图形了吧！但为了直观展示这种模拟方式和实际超声波检测的差异，我在下面放了两张图片。  
 
 模拟的超声波检测空间  
-![](https://gitee.com/shoufei/blog_images/raw/master/20220403083515.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/2d22c2b27d670dcaee723ebdfefbbd17.png)
 
 实际超声波的检测空间  
-![](https://gitee.com/shoufei/blog_images/raw/master/20220403083743.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/07c0f68e77fb5f2823c03236d7f78546.png)
 
 在`RangeSensorLayer`层中，超声波检测区域中的栅格值是通过概率模型(probabalistic model)进行更新的。
 ```c++
@@ -254,13 +254,13 @@ void CostmapFilter::updateBounds(
 
 
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220404025722.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/f97a6c80493c5a31e261f2ee8f93f2f4.png)
 
 
 
 `Costmap_2d Filters`的运行机制如下图所示：
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220404090632.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/42259858b2fe66d876313661d686eeeb.png)
 
 `CostmapFilterInfoServer`负责加载一些参数发布给`filter`。`MapServer`主要是加载地图文件并发布给`filter`。  
 
@@ -270,7 +270,7 @@ void CostmapFilter::updateBounds(
 
 下面是`KeepoutFilter`的一个例子：
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220404093235.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/157808cf2a9f3a580db0e49a2c6e6b89.png)
 
 
 
