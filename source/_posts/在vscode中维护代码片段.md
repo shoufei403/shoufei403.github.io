@@ -1,5 +1,5 @@
 ---
-title: “在vscode中维护代码片段” #文章页面上的显示名称，一般是中文
+title: 在Vscode中维护代码片段 #文章页面上的显示名称，一般是中文
 date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: 实用技巧 #分类
 tags: [vscode] #文章标签，可空，多标签请用格式，注意:后面有个空格
@@ -12,19 +12,19 @@ description: 在vscode中维护代码片段
 
 vscode的语言插件已经内置了一些snippet。例如：C++的插件。当你在编辑器里输入main时，会提示你可以插入的snippet。
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220116172727.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/11c828cc9aca8e7404eff9e2616bd06f.png)
 
 但是也可以自己定义`snippet`，然后通过关键字来触发插入`snippet`。
 
 vscode支持非常多编程语言的snippet。通过`ctrl+shift+p` ，打开命令面板。输入`snippet` ，就能看到`snippet`的配置选项。 
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220116173221.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/8f3fe95d793716056d5dee46cb5742c4.png)
 
 
 
 点击`Configure User Snippets` 后就可以选择配置哪种语言的`snippet`了。
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220116173530.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/614d74cfed10a7edb2ea9a6b7ab28c10.png)
 
 点击语言名称可以生成相应语言的json文件。这个json文件就是用于维护snippet的。其中的cpp.json和python.json文件就是分别维护相应语言snippet的文件。snippet的内容可以按照语言类别来维护。在编辑器里插入时，vscode会检测当前编辑的是什么语言。当输入snippet的触发词时，只会触发对应语言的snippet。
 
@@ -91,7 +91,7 @@ snippet文件的格式如下所示:
 2. 在cpp.json文件中选中刚才拷贝过来的代码。
 3. 使用`ctrl+shift+p` 快捷键打开命令面板。输入`snippet` 。然后点击`Generate snippet JSON block`。
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220116195217.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/a5a03b7f7669115c1669ca0c0fe3e72c.png)
 
 4. 注意加上`,`。完工。 
 
@@ -105,7 +105,7 @@ snippet文件的格式如下所示:
 
 当键入`snippet` 关键词（即文件中prefix的值）时会自动提示可以插入的`snippet`。
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220116200948.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/b49d932cf402ab0fde9e87a8413305ad.png)
 
 提示的左侧会显示`snippet` 关键词（即prefix的值），右侧则显示`snippet` 的名称。如果键入关键词没有触发可选项，可以手动按`ctrl+space空格` 来触发。
 

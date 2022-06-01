@@ -1,5 +1,5 @@
 ---
-title: “从源码编译安装OpenCV” #文章页面上的显示名称，一般是中文
+title: 从源码编译安装OpenCV #文章页面上的显示名称，一般是中文
 date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: OpenCV #分类
 tags: [OpenCV] #文章标签，可空，多标签请用格式，注意:后面有个空格
@@ -14,7 +14,7 @@ OpenCV的release页面
 
 选择相应的版本，下载源码
 
-![OpenCV3.4.14](https://gitee.com/shoufei/blog_images/raw/master/20220118085754.png)
+![OpenCV3.4.14](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/d3f1532c4d4acb04332cc6fe06d901bd.png)
 
 ## 下载[opencv_contrib](https://github.com/opencv/opencv_contrib)源码
 
@@ -22,7 +22,7 @@ OpenCV的release页面
 
 [https://github.com/opencv/opencv_contrib/tags](https://github.com/opencv/opencv_contrib/tags)
 
-![opencv_contrib](https://gitee.com/shoufei/blog_images/raw/master/20220118085851.png)
+![opencv_contrib](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/f3768099108c3d3dc8a3993f1b5137f3.png)
 
 ## 编译安装opencv
 
@@ -48,7 +48,7 @@ opencv_contrib-3.4.14/modules/face/CMakeLists.txt
 
 加好的效果类似下图：
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220118085941.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/7dc1610a5a769aaf1dbd7bc481817dd5.png)
 
 
 

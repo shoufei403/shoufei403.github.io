@@ -1,5 +1,5 @@
 ---
-title: “rviz远程查看机器人状态数据的方法” #文章页面上的显示名称，一般是中文
+title: Rviz远程查看机器人状态数据的方法 #文章页面上的显示名称，一般是中文
 date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2] #文章标签，可空，多标签请用格式，注意:后面有个空格
@@ -59,7 +59,9 @@ export ROS_MASTER_URI="http://192.168.10.87:11311"       #其中192.168.10.87为
 
 PS：如果想直观地远程打开机器人电脑中的文件，可以使用`Ubuntu`文件窗口(Connect to Server)访问机载电脑上的文件。
 
-![Screenshot from 2020-10-22 17-00-51](https://gitee.com/shoufei/markdown_picture/raw/master/img/Screenshot%20from%202020-10-22%2017-00-51.png)
+
+
+![image-20220601222703152](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/image-20220601222703152.png)
 
 `Server address` 的地址按下面的形式来写：
 
@@ -97,5 +99,5 @@ sftp://root@192.168.1.15/usr
 
 另外在公众号《**首飞**》内回复“机器人”获取精心推荐的C/C++，Python，Docker，Qt，ROS1/2等机器人行业常用技术资料。
 
-![](https://gitee.com/shoufei/blog_images/raw/master/shoufei_qr.jpg)
+![公众号](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/shoufei_qr_gongzhonghao.jpg)
 

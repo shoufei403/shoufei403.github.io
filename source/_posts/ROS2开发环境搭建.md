@@ -1,5 +1,5 @@
 ---
-title: “ROS2开发环境搭建” #文章页面上的显示名称，一般是中文
+title: ROS2开发环境搭建 #文章页面上的显示名称，一般是中文
 date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2] #文章标签，可空，多标签请用格式，注意:后面有个空格
@@ -22,9 +22,11 @@ Ubuntu 主机
 
 [https://kb.vmware.com/s/article/1022525](https://kb.vmware.com/s/article/1022525)
 
-windows主机
+xxxxxxxxxx vcs export src >> tmp.reposBash
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220217130938.png)
+
+
+![image-20220601211729113](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/image-20220601211729113.png)
 
 
 

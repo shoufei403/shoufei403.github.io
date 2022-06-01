@@ -1,5 +1,5 @@
 ---
-title: “自定义ROS2消息” #文章页面上的显示名称，一般是中文
+title: 自定义ROS2消息 #文章页面上的显示名称，一般是中文
 date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2] #文章标签，可空，多标签请用格式，注意:后面有个空格
@@ -295,4 +295,4 @@ ros2 interface show tutorial_interfaces/msg/Num
 
 另外在公众号《**首飞**》内回复“机器人”获取精心推荐的C/C++，Python，Docker，Qt，ROS1/2等机器人行业常用技术资料。
 
-![](https://gitee.com/shoufei/blog_images/raw/master/shoufei_qr.jpg)
+![公众号](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/shoufei_qr_gongzhonghao.jpg)

@@ -1,5 +1,5 @@
 ---
-title: “如何理解ROS2 QOS” #文章页面上的显示名称，一般是中文
+title: 如何理解ROS2 QOS #文章页面上的显示名称，一般是中文
 date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [QOS] #文章标签，可空，多标签请用格式，注意:后面有个空格
@@ -125,7 +125,7 @@ QoS::keep_last(size_t depth)
 
 这里有一张对比表帮助我们避免不兼容的Qos策略设置。
 
-![](/home/kevin/kevin_blogs/TMP_images/20220421025935.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/dae20735906878ae41fc7e164b3c24f1.png)
 
 表中的`x`表示人为设定了某个值，`Default`值根据不同的`DDS`有不同的设定。通常是下面两种：
 
@@ -530,7 +530,7 @@ best_effort
 
 如果想动手测试不同`Qos`配置的效果，可下载我收集整理的开源代码。在公众号《**首飞**》后台回复“qos”即可。
 
-![](/home/kevin/kevin_blogs/TMP_images/20220423040133.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/3e36b54ec459b04c88058944a50db0d1.png)
 
 
 
@@ -544,5 +544,5 @@ best_effort
 
 另外在公众号《**首飞**》内回复“机器人”获取精心推荐的C/C++，Python，Docker，Qt，ROS1/2等机器人行业常用技术资料。
 
-![](https://gitee.com/shoufei/blog_images/raw/master/shoufei_qr.jpg)
+![公众号](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/shoufei_qr_gongzhonghao.jpg)
 
