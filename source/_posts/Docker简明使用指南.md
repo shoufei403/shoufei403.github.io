@@ -16,7 +16,7 @@ description: 快速吧Docker用起来
 
 ## 安装Docker
 
-```SQL
+```bash
 # step 1: 安装必要的一些系统工具
 sudo apt-get update
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
@@ -47,7 +47,7 @@ sudo apt-get install x11-xserver-utils //确保安装了x11
 
 ## 拉取ubuntu20镜像
 
-```Apache
+```bash
 docker pull shoufei/foxy:navigation2
 ```
 
@@ -55,7 +55,7 @@ docker pull shoufei/foxy:navigation2
 
 ## 显示GUI应用界面
 
-```Nginx
+```bash
  xhost +
 ```
 
@@ -68,7 +68,7 @@ docker pull shoufei/foxy:navigation2
 
 **以共享显示的方式创建容器**
 
-```Groovy
+```bash
 sudo docker run -it \
   -v /etc/localtime:/etc/localtime:ro \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
@@ -86,14 +86,14 @@ sudo docker run -it \
 
 **查看已经在运行的容器ID**
 
-```C%2B%2B
+```bash
 //查看已经在运行的容器ID
 sudo docker ps -a
 ```
 
 **启动容器**
 
-```Apache
+```bash
 sudo docker start eb9c37626c86 #eb9c37626c86为容器的id
 ```
 
@@ -101,7 +101,7 @@ sudo docker start eb9c37626c86 #eb9c37626c86为容器的id
 
 **当启动了容器后可以用下面的命令多开容器命令窗口**
 
-```Apache
+```bash
 sudo docker exec -it 31ced27e1684 /bin/bash  #31ced27e1684是容器的id
 ```
 
@@ -109,13 +109,13 @@ sudo docker exec -it 31ced27e1684 /bin/bash  #31ced27e1684是容器的id
 
 **停止容器**
 
-```SQL
+```bash
 sudo docker stop 容器id
 ```
 
 **删除启动的容器**
 
-```Apache
+```bash
 sudo docker rm -f cf48d1718558
 ```
 
@@ -123,7 +123,7 @@ sudo docker rm -f cf48d1718558
 
 需要先把加载了镜像的容器停止，再删除。ubuntu是镜像仓库名，latest是tag。
 
-```Nginx
+```bash
 sudo docker rmi ubuntu:latest
 ```
 
@@ -135,7 +135,7 @@ sudo docker rmi ubuntu:latest
 
 下面是一个示例： 
 
-```Nginx
+```bash
 #启动容器
 sudo docker run -it \
   -v /etc/localtime:/etc/localtime:ro \
@@ -169,7 +169,7 @@ sudo docker run -it \
 
 **本地登入docker**
 
-```Nginx
+```bash
 sudo docker login
 #登录自己的dockerhub的账户
 ```

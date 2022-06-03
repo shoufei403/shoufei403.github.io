@@ -10,13 +10,13 @@ description: map_server 加载地图文件的三种模式
 
 `map`话题的类型是`nav_msgs::msg::OccupancyGrid`。使用下面的命令可以查询该类型的数据结构。  
 
-```
+```bash
 ros2 interface show nav_msgs/msg/OccupancyGrid
 ```
 
 `nav_msgs::msg::OccupancyGrid`的数据结构：
 
-```
+```bash
 # This represents a 2-D grid map
 std_msgs/Header header
         builtin_interfaces/Time stamp
@@ -104,7 +104,7 @@ struct LoadParameters
 
 
 
-地图图片中每个像素可能有多个颜色通道。比如：RGB。像素的明暗程度值是通过求取各个颜色通道的明暗程度值得到的。像素的明暗程度值的范围在[0~1.0]。下面是代码的实现：
+地图图片中每个像素可能有多个颜色通道。比如：`RGB`。像素的明暗程度值是通过求取各个颜色通道的明暗程度值得到的。像素的明暗程度值的范围在[0~1.0]。下面是代码的实现：
 
 ```c++
       auto pixel = img.pixelColor(x, y);

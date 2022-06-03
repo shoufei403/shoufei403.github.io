@@ -8,7 +8,12 @@ description: 详细介绍了costmap
 
 ## costmap是什么？
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200201191858626.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nob3VmZWk0MDM=,size_16,color_FFFFFF,t_70)
+
+
+
+
+![costmap](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/20200201191858626.png)
+
 costmap翻译过来是代价地图的意思。由SLAM算法生成栅格地图。我们为栅格地图中的每一个栅格分配一个代价值，这样就形成了costmap。路径规划算法则可以在具有代价的栅格地图上生成路径。规划路径的生成则是强依赖于代价值。为了生成合适的路径，我们需要为每个栅格分配合适的代价值。最开始想到的是在单层的costmap中更新每个栅格的代价，然后直接给路径规划算法。但这样会引起诸多问题。比如因为所有的数据都在同一个costmap中更新，任何一个数据的变动都需要拿到之前其他的数据重新一起计算代价值。比如数据更新的地图范围也不好确定。比如当数据类型多了之后，数据整合的顺序不好控制。
 
 后来想到将单层的costmap分成多层是个好办法。如上图所示，一层costmap只用同一种数据来更新。比如最底层的static map就是SLAM算法生成的静态地图。使用静态地图数据生成一层costmap。Obstacles 层则是由传感器数据更新的costmap层。甚至可以根据某些特殊目的自定义一个costmap层，使生成的路径规避某些区域。这在单层的costmap算法中是很难实现的。最后将所有的costmap层按特定的顺序组合起来形成了layered_costmap。可以看到这是一种更为灵活，扩展性也更强的方法。 
@@ -19,7 +24,10 @@ costmap翻译过来是代价地图的意思。由SLAM算法生成栅格地图。
 
 
 costmap_2d功能包实现了上述的分层costmap。主要有static层，obstacle层，voxel_layer层和inflation层。每个层的数据类型是以插件的形式提供的。如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200202160112364.png)
+![在这里插入图片描述](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/20200202160112364.png)
+
+
+
 其中inflation层使用InflationLayer类型数据，static层使用StaticLayer类型数据，而obstacle层可以选择VoxelLayer数据或者ObstacleLayer数据。插件的具体配置是在global_costmap_params.yaml文件和local_costmap_params.yaml文件中。
 
 ```bash
@@ -30,7 +38,12 @@ costmap_2d功能包实现了上述的分层costmap。主要有static层，obstac
 ```
 
 各层数据类型的组成和继承关系如下图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200202164903843.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nob3VmZWk0MDM=,size_16,color_FFFFFF,t_70)
+
+
+![在这里插入图片描述](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/20200202164903843.png)
+
+
+
 Costmap2D类维护了每个栅格的代价值。Layer类是虚基类，它统一了各插件costmap层的接口。其中最主要的接口函数有：
 **initialize函数**，它调用onInitialize函数，分别对各costmap层进行初始化；
 
@@ -45,7 +58,7 @@ Costmap2D类维护了每个栅格的代价值。Layer类是虚基类，它统一
 CostmapLayer类同时继承了Layer类和Costmap2D类，并提供了几个更新cost值的操作方法。StaticLayer类和ObstacleLayer类需要保存实例化costmap层的cost值，所以都继承了CostmapLayer类。StaticLayer类使用静态栅格地图数据更新自己的costmap。ObstacleLayer类使用传感器数据更新自己的costmap。VoxelLayer类相对于ObstacleLayer类则多考虑了z轴的数据。效果的区别主要体现在障碍物的清除方面。一个是二维层面的清除，一个是三维里的清除。
 
 算法的主要执行流程图如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200202230758394.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nob3VmZWk0MDM=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/20200202230758394.png)
 
 ## 问题：
 

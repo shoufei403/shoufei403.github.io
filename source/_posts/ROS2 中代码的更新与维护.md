@@ -10,7 +10,7 @@ description: ROS2 中代码的更新与维护方法
 
 安装vcs
 
-```Apache
+```bash
 sudo apt-get install python3-vcstool
 ```
 

@@ -178,7 +178,7 @@ site_state: true
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   GitHub: https://github.com/shoufei403 || fab fa-github
-  CSND: https://blog.csdn.net/shoufei403?type=blog || fab fa-csdn
+  CSDN: https://blog.csdn.net/shoufei403?type=blog || fab fa-csdn
   知乎: https://www.zhihu.com/people/shou-fei-41 || fab fa-zhihu
   B站: https://space.bilibili.com/69939043 || fab fa-bilibili
   #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
@@ -192,7 +192,7 @@ social:
   #Skype: skype:yourname?call|chat || fab fa-skype
 
 social_icons:
-  enable: true
+  enable: false
   icons_only: true
   transition: false
 
@@ -279,7 +279,7 @@ reward:
 follow_me:
   #Twitter: https://twitter.com/username || fab fa-twitter
   #Telegram: https://t.me/channel_name || fab fa-telegram
-  WeChat: /images/wechat_channel.jpg || fab fa-weixin
+  # WeChat: /images/wechat_channel.jpg || fab fa-weixin
   #RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
@@ -631,7 +631,7 @@ valine:
 
 # LiveRe comments system
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-livere_uid: # <your_uid>
+livere_uid: # <your_uid> MTAyMC81NjUyNy8zMjk5MA==  
 
 # Gitalk
 # For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk
@@ -742,7 +742,7 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
@@ -998,3 +998,23 @@ vendors:
 css: css
 js: js
 images: images
+
+#添加阅读统计
+# Show PV/UV of the website/page with busuanzi.
+# Get more information on http://ibruce.info/2015/04/04/busuanzi/
+# busuanzi_count:
+#   # count values only if the other configs are false
+#   enable: true
+#   # custom uv span for the whole site
+#   site_uv: true
+#   site_uv_header: <i class="fa fa-user"></i>
+#   site_uv_footer:
+#   # custom pv span for the whole site
+#   site_pv: true
+#   site_pv_header: <i class="fa fa-eye"></i>
+#   site_pv_footer:
+#   # custom pv span for one page only
+#   page_pv: true
+#   page_pv_header: <i class="fa fa-eye"></i>
+#   page_pv_footer:
+

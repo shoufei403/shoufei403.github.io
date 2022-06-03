@@ -19,7 +19,7 @@ description: rviz远程查看机器人状态数据的方法
 使用`sudo vim /etc/hosts`打开电脑的`/etc/hosts`文件，添加机载电脑的主机名和`IP`地址。  
 完成的效果如下：
 
-```
+```bash
 127.0.0.1	localhost
 127.0.1.1	kevin-Vostro-5568
 
@@ -35,7 +35,7 @@ ff02::2 ip6-allrouters
 `my_robot `为机载电脑的主机名（由`hostname`命令获取）
 
 同样的，在机载电脑上也修改`/etc/hosts` 文件，添加笔记本电脑的主机名和`IP`地址。效果如下：
-```
+```bash
 127.0.0.1	localhost
 127.0.1.1	my_robot
 192.168.10.56 my_laptop  #该条为添加内容

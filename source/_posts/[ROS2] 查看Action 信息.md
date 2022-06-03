@@ -10,27 +10,27 @@ description: 查看Action 信息
 Action主要用于长时间运行的任务。它们由三部分组成：目标、反馈和结果。
 
 查看action列表
-```
+```bash
 ros2 action list
 ```
 
 查看action列表和类型
-```
+```bash
 ros2 action list -t
 ```
 
 查看action信息
-```
+```bash
 ros2 action info <action_name>
 ```
 
 显示action
-```
+```bash
 ros2 interface show <action_name>
 ```
 
 action send goal
-```
+```bash
 ros2 action send_goal <action_name> <action_type> <values>
 ```
 

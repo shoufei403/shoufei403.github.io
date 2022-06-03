@@ -36,13 +36,14 @@ docker version
 
 也可以使用小鱼提供的开源`一键安装`工具。关注小鱼的公众号《鱼香ROS》获取更多信息。  
 
-工具网址：  [https://fishros.com/docs/page/#/tools/install-ros/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90ROS](https://fishros.com/docs/page/#/tools/install-ros/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90ROS)
+工具网址：    
+[https://fishros.com/docs/page/#/tools/install-ros/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90ROS](https://fishros.com/docs/page/#/tools/install-ros/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90ROS)
 
 ```
 wget http://fishros.com/install -O fishros && . fishros
 ```
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220410053359.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/dd410f5f4c323149c6341094463d4073.png)
 
 > 该命令需要在`bash`命令窗口运行，`zsh`命令窗口运行会出错。请知晓。
 
@@ -50,7 +51,7 @@ wget http://fishros.com/install -O fishros && . fishros
 
 **拉取Docker镜像**
 
-```
+```bash
 docker pull shoufei/ros2_galactic:latest_v_0_1
 ```
 
@@ -58,7 +59,7 @@ docker pull shoufei/ros2_galactic:latest_v_0_1
 
 **拉取示例代码**
 
-```
+```bash
 git clone https://gitee.com/shoufei/ros2_galactic.git
 ```
 
@@ -68,7 +69,7 @@ git clone https://gitee.com/shoufei/ros2_galactic.git
 
 > 注意：下面命令中的`/path_to/ros2_galactic`需要改成你自己的路径
 
-```
+```bash
 docker run -it \
 -v /etc/localtime:/etc/localtime:ro \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
@@ -91,7 +92,7 @@ shoufei/ros2_galactic:latest_v_0_1 /bin/bash
 
 先查询docker的id。每台电脑上的id是随机生成的，请以自己的id为准。
 
-```
+```bash
 docker ps -a
 ```
 
@@ -101,7 +102,7 @@ docker ps -a
 
 使用下面的命令登录Docker容器
 
-```
+```bash
 docker exec -it 31ced27e1684 /bin/bash  #31ced27e1684是容器的id
 ```
 
@@ -109,7 +110,7 @@ docker exec -it 31ced27e1684 /bin/bash  #31ced27e1684是容器的id
 
 切换容器中的用户名为ubuntu（这句要进入到容器中才执行）
 
-```
+```bash
 su ubuntu
 ```
 
@@ -123,7 +124,7 @@ su ubuntu
 
 **启动仿真环境**
 
-```
+```bash
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py 
 ```
 
@@ -143,7 +144,7 @@ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 
 可以通过下面的命令打开图片并且编辑。  
 
-```
+```bash
 gimp keepout_dark_mask.pgm
 ```
 
@@ -152,7 +153,7 @@ gimp keepout_dark_mask.pgm
 
 系统中没有安装`gimp`的话，按照下面的方法安装：
 
-```
+```bash
 sudo apt update
 sudo add-apt-repository ppa:otto-kesselgulasch/gimp
 sudo apt install gimp
@@ -165,20 +166,19 @@ sudo apt install gimp
 编辑操作方法查看下面的视频：
 
 
-
-todo : 加图片 的制作视频
-
-
-
-
-
-
+<iframe 
+    width="800" 
+    height="450" 
+    src="https://player.bilibili.com/player.html?aid=510569544"
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
 
 **启动nav2_costmap_filters_demo节点**
 
 **启动keepout相关NAV2 Stack**
 
-```
+```bash
 ros2 launch turtlebot3_navigation2 navigation2_keepout.launch.py use_sim_time:=True
 ```
 
@@ -192,19 +192,19 @@ ros2 launch turtlebot3_navigation2 navigation2_keepout.launch.py use_sim_time:=T
 
 
 
-```
+```bash
 ros2 launch nav2_costmap_filters_demo costmap_filter_info.launch.py params_file:=src/navigation2_tutorials/nav2_costmap_filters_demo/params/keepout_params.yaml mask:=src/navigation2_tutorials/nav2_costmap_filters_demo/maps/keepout_mask.yaml
 ```
 
 
 
-```yaml
+```bash
 ros2 launch nav2_costmap_filters_demo costmap_filter_info.launch.py params_file:=src/navigation2_tutorials/nav2_costmap_filters_demo/params/keepout_params.yaml mask:=src/navigation2_tutorials/nav2_costmap_filters_demo/maps/keepout_light_mask.yaml
 ```
 
 
 
-```
+```bash
 ros2 launch nav2_costmap_filters_demo costmap_filter_info.launch.py params_file:=src/navigation2_tutorials/nav2_costmap_filters_demo/params/keepout_params.yaml mask:=src/navigation2_tutorials/nav2_costmap_filters_demo/maps/keepout_dark_mask.yaml
 ```
 
@@ -261,9 +261,15 @@ keepout_filter:
 
 效果如下：
 
-todo: keepout demo without inflation.mp4
 
 
+<iframe 
+    width="800" 
+    height="450" 
+    src="https://player.bilibili.com/player.html?aid=980584896"
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
 
 当`keepout_filter`按照如下方式配置时，我们可以看到虚拟障碍物的膨胀效果：
 
@@ -279,9 +285,14 @@ keepout_filter:
 
 
 
-todo: keepout demo_inflation.mp4
 
-
+<iframe 
+    width="800" 
+    height="450" 
+    src="https://player.bilibili.com/player.html?aid=510587380"
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
 
 ### 测试`SpeedFilter`
 
@@ -291,7 +302,7 @@ todo: keepout demo_inflation.mp4
 
 `Speed Mask`的配置文件（`navigation2_tutorials/nav2_costmap_filters_demo/maps/speed_mask.yaml`）如下：  
 
-```
+```bash
 image: speed_mask.pgm
 mode: scale
 resolution: 0.050000
@@ -307,7 +318,7 @@ free_thresh: 0.0
 
 **启动Speedlimit相关NAV2 Stack**
 
-```
+```bash
 ros2 launch turtlebot3_navigation2 navigation2_speedlimit.launch.py use_sim_time:=True
 ```
 
@@ -315,13 +326,13 @@ ros2 launch turtlebot3_navigation2 navigation2_speedlimit.launch.py use_sim_time
 
 运行下面的命令加载`SpeedFilter`：
 
-```
+```bash
 ros2 launch nav2_costmap_filters_demo costmap_filter_info.launch.py params_file:=src/navigation2_tutorials/nav2_costmap_filters_demo/params/speed_params.yaml mask:=src/navigation2_tutorials/nav2_costmap_filters_demo/maps/speed_mask.yaml
 ```
 
 
 
-```
+```bash
 ros2 launch nav2_costmap_filters_demo costmap_filter_info.launch.py params_file:=src/navigation2_tutorials/nav2_costmap_filters_demo/params/speed_params.yaml mask:=src/navigation2_tutorials/nav2_costmap_filters_demo/maps/speed_light_mask.yaml
 ```
 
@@ -446,7 +457,7 @@ speed_filter:
 
 在这个实践示例中采用第一种以百分比限制速度的方式。该方式的配置在`navigation2_tutorials/nav2_costmap_filters_demo/params/speed_params.yaml`文件中。参数内容如下：  
 
-```
+```yaml
 costmap_filter_info_server:
   ros__parameters:
     use_sim_time: true
@@ -484,7 +495,17 @@ speed_limit_ = speed_mask_data * multiplier_ + base_;
 
 > 当`speed_limit_`为0的时候表示没有速度限制，所以当画的`mask`区域颜色非常深，是障碍物的深度，可能计算出来的速度限制百分比为0。
 
+速度限制效果如下：
 
+
+
+<iframe 
+    width="800" 
+    height="450" 
+    src="https://player.bilibili.com/player.html?aid=638016637"
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
 
 实践参考
 
@@ -494,35 +515,15 @@ speed_limit_ = speed_mask_data * multiplier_ + base_;
 
 
 
-下面为官方的演示视频：
-
-
-
-todo：添加视频号中转载的官方演示视频
-
-
-
-
-
 更多关于`costmap`，`keepout_filter`和`speed_filter`的详细内容请查看之前发布文章：  
 
-TODO：加之前发的costmap相关的文章
+[Navigation:costmap是什么？](https://blog.csdn.net/shoufei403/article/details/104068107)
+
+[[ROS2] 你应该知道Costmap_2d 的这些细节](https://blog.csdn.net/shoufei403/article/details/123960135)
 
 
 
 
-
-
-
-___
-
-TODO：下面的话加入到csdn和知呼中。
-
-文章在公众号《首飞》中首发，因为各平台视频链接不兼容的关系，部分视频没有加入到文章中。公众号的文章中有更多的演示视频来帮助大家理解。
-
-
-
-最近在写ROS2相关的文章，如果你有感兴趣的话题，希望我来写一写，可以与我交流。个人微信可以在公众号《首飞》里找到。谢谢！
 
 
 

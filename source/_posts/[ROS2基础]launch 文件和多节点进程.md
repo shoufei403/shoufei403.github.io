@@ -15,7 +15,7 @@ description: ROS2基础之launch文件和多节点进程
 
 [https://docs.ros.org/en/galactic/How-To-Guides/Launch-file-different-formats.html](https://docs.ros.org/en/galactic/How-To-Guides/Launch-file-different-formats.html)
 
-<!--more-->
+
 
 `launch`文件一般通过下面的命令启动：
 
@@ -25,7 +25,7 @@ ros2 launch <package_name> <launch_file_name>
 
 **值的注意的是**，当`package`编译时加了`--symlink-install`选项，在包内修改了`launch`文件，不用编译也是生效的。  
 
-
+<!--more-->
 
 首先，我们来体验一下`launch`文件的功能。这里重声一下`launch`文件的作用：**配置**节点和**启动**节点。  
 

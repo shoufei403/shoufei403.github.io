@@ -28,7 +28,7 @@ OpenCV的release页面
 
 1. 新建目录
 
-```JavaScript
+```bash
 mkdir ~/opencv_build && cd ~/opencv_build
 ```
 
@@ -38,7 +38,7 @@ mkdir ~/opencv_build && cd ~/opencv_build
 
 2. 对下列文件进行修改
 
-```Apache
+```bash
 opencv_contrib-3.4.14/modules/xfeatures2d/cmake/download_boostdesc.cmake
 opencv_contrib-3.4.14/modules/xfeatures2d/cmake/download_vgg.cmake
 opencv_contrib-3.4.14/modules/face/CMakeLists.txt
@@ -56,7 +56,7 @@ opencv_contrib-3.4.14/modules/face/CMakeLists.txt
 
 在opencv文件夹中新建build目录
 
-```Apache
+```bash
 cd opencv-3.4.14
 mkdir build
 cd build
@@ -64,7 +64,7 @@ cd build
 
 在build目录下执行下面的cmake命令。需要配置`OPENCV_EXTRA_MODULES_PATH` 参数。这个参数是opencv_contrib/modules的路径。
 
-```SQL
+```bash
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D INSTALL_C_EXAMPLES=ON \

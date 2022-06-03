@@ -31,7 +31,7 @@ Costmap_2d 的插件都是继承于`CostmapLayer`。具体的关系如下图所�
 `ObstacleLayer`内可以加载多种传感器的障碍物观测数据。但是数据类型只支持`PointCloud2` 和 `LaserScan`。其中`LaserScan`类型的数据会被转换成`PointCloud2` 类型数据。因为`ObservationBuffer` 只存储`PointCloud2` 类型数据。  
 
 `ObstacleLayer`内有下面几个层级参数需要关注一下：
-```yaml
+```c++
 declareParameter("enabled", rclcpp::ParameterValue(true));//使能该层
 
 declareParameter("footprint_clearing_enabled", rclcpp::ParameterValue(true));//清楚footprint占用的区域
@@ -44,7 +44,7 @@ declareParameter("observation_sources", rclcpp::ParameterValue(std::string("")))
 ```
 
 每种传感器的观测数据都可以独立配置如下参数：
-```yaml
+```c++
 declareParameter(source + "." + "topic", rclcpp::ParameterValue(source));
 
 declareParameter(source + "." + "sensor_frame", rclcpp::ParameterValue(std::string("")));
@@ -165,7 +165,7 @@ double new_prob = prob_occ / (prob_occ + prob_not);//更新被占用的概率
 
 - 首先向四周扩展栅格  
 
-```
+```c++
       // attempt to put the neighbors of the current cell onto the inflation list
       if (mx > 0) {
         enqueue(index - 1, mx - 1, my, sx, sy);
@@ -217,7 +217,7 @@ InflationLayer::enqueue(
 
 关于costmap的插件配置，这里需要注意一下配置的顺序。代码中插件加载的顺序就是按照配置顺序来的。"inflation_layer"一般放在最后面。因为它最终将前面几个层的障碍物信息一起膨胀。如果不想膨胀某个插件层，则可以将其放在"inflation_layer"之后。  
 
-```
+```yaml
 plugins: ["static_layer", "obstacle_layer", "voxel_layer", "inflation_layer"] 
 ```
 

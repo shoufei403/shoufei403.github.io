@@ -67,7 +67,7 @@ ROS2中提供了两种节点类型。
 
 下图演示了各个状态之间是如何切换的。  
 
-![life_cycle_sm](http://design.ros2.org/img/node_lifecycle/life_cycle_sm.png)
+![life_cycle_sm](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/life_cycle_sm.png)
 
 图片来源于：[http://design.ros2.org/articles/node_lifecycle.html](http://design.ros2.org/articles/node_lifecycle.html)
 图中，蓝色部分是表示节点状态，黄色部分是状态转换需执行的函数。
@@ -378,40 +378,40 @@ int main(int argc, char * argv[])
 ```
 
 通过下面的方式获取完整的`lifecycle_node_demo`工程。
-```
+```bash
 git clone https://gitee.com/shoufei/lifecycle_node_demo.git
 ```
 
 需要注意的是，LifecycleNode 类型节点中的话题发布器需要按下面的方式定义。
-```
+```c++
 std::shared_ptr<rclcpp_lifecycle::LifecyclePublisher<std_msgs::msg::String>> pub_;
 ```
 话题订阅器则与普通Node类型节点一样。
 
 编译并source了该工程后就可以用下面的命令启动该示例。
-```
+```bash
 ros2 launch lifecycle_node_demo lifecycle_demo.launch.py
 ```
 
 用` ros2 topic list`命令查看，可以发现有下面这个话题。
-```
+```bash
 /lifecycle_node_demo_node/transition_event
 ```
 但是没有代码中定义的`managed_scan`话题。这是因为节点启动后并没有执行`on_configure`函数。它还处于`Unconfigured`状态。而发布器的定义是在`on_configure`函数中的。
 
 通过下面的命令可获取节点状态
-```
+```bash
 ros2 lifecycle get /lifecycle_node_demo_node
 ```
 此时它返回
-```
+```bash
 unconfigured [1]
 ```
 
 当我们打印`/lifecycle_node_demo_node/transition_event`话题内容时，发现并没有任何数据。那是因为目前并没有发生状态转换。
 
 使用下面的命令来设置节点状态
-```
+```bash
 ros2 lifecycle set /lifecycle_node_demo_node configure
 ```
 可以设置的状态有下面几个
@@ -423,12 +423,12 @@ ros2 lifecycle set /lifecycle_node_demo_node configure
 
 
 转换状态成功后将打印
-```
+```bash
 Transitioning successful
 ```
 
 `/lifecycle_node_demo_node/transition_event`话题也打印了下面的信息
-```
+```bash
 timestamp: 0
 transition:
   id: 0
@@ -733,7 +733,7 @@ parameters=[{'use_sim_time': use_sim_time},
 ```
 
 其中`lifecycle_nodes`变量定义了需要管理的节点。**注意，这些节点都是继承于`LifecycleNode`。**
-```
+```python
 lifecycle_nodes = ['controller_server',
 
 'planner_server',

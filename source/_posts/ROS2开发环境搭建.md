@@ -54,7 +54,7 @@ wget http://fishros.com/install -O fishros && sudo bash fishros
 
 [Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/Download)
 
-```Ada
+```bash
 sudo dpkg -i code_1.xx.0-1625728071_amd64.deb
 ```
 
@@ -70,7 +70,7 @@ github下载加速工具
 
 添加下面的命令到~/.bashrc文件中
 
-```Ada
+```bash
 alias cb='colcon build --symlink-install'
 alias cbp='colcon build --symlink-install --packages-select'
 alias cbns='colcon build'

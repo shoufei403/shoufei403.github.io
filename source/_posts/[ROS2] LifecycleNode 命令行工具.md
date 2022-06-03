@@ -11,14 +11,14 @@ description: LifecycleNode命令行工具
 
 ### 获取LifecycleNode节点的状态
 
-```
+```bash
 ros2 lifecycle get /lifecycle_node_demo_node
 ```
 其中`/lifecycle_node_demo_node`为节点名称
 
 
 ### 设置LifecycleNode节点的状态
-```
+```bash
 ros2 lifecycle set /lifecycle_node_demo_node configure
 
 ```
@@ -33,17 +33,17 @@ ros2 lifecycle set /lifecycle_node_demo_node configure
 
 ### 查看系统中有哪些LifecycleNode节点
 
-```
+```bash
 ros2 lifecycle nodes
 ```
 
 ### 查看LifecycleNode节点的所有可行的转换
-```
+```bash
 ros2 lifecycle list lifecycle_node_demo_node -a
 ```
 其中`/lifecycle_node_demo_node`为节点名称
 
 显示基于当前状态的可行切换函数
-```
+```bash
 ros2 lifecycle list lifecycle_node_demo_node
 ```

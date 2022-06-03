@@ -10,7 +10,7 @@ description: 下载Navigation2源码来学习
 
 **代码下载**
 
-```SQL
+```bash
 #安装git和编译工具
 sudo apt-get install git python3-vcstool build-essential python3-colcon-common-extensions
 mkdir -p turtlebot3_ws/src
@@ -36,7 +36,7 @@ git clone https://ghproxy.com/https://github.com/rst-tu-dortmund/teb_local_plann
 
 **安装vcs**
 
-```Apache
+```bash
 sudo apt-get install python3-vcstool
 ```
 
@@ -118,7 +118,7 @@ source install/setup.bash
 
 另外在公众号《**首飞**》内回复“机器人”获取精心推荐的C/C++，Python，Docker，Qt，ROS1/2等机器人行业常用技术资料。
 
-![](https://gitee.com/shoufei/blog_images/raw/master/shoufei_qr.jpg)
+![公众号](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/shoufei_qr_gongzhonghao.jpg)
 
 
 

@@ -16,7 +16,7 @@ description: ROS2话题与服务的使用
 
 `colcon` 编译工具安装
 
-```Apache
+```bash
 sudo apt install python3-colcon-common-extensions git
 ```
 
@@ -57,7 +57,7 @@ colcon build --symlink-install
 colcon build --symlink-install --packages-select 包名
 ```
 
-![](/home/kevin/kevin_blogs/TMP_images/20220417102405.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/8c7549c59627c09ed3a618bf47841371.png)
 
 source环境
 
@@ -136,7 +136,7 @@ mkdir -p galactic_ws/src
 
 下面是一个典型的机器人系统框架图。
 
-![](/home/kevin/kevin_blogs/TMP_images/20220417103021.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/2f59da57e8527bcd7da2b79b16230812.png)
 
 
 
@@ -253,7 +253,7 @@ ros2 run examples_rclcpp_minimal_publisher publisher_member_function
 rqt
 ```
 
-![](/home/kevin/kevin_blogs/TMP_images/20220417103817.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/72378de6a4f955ad74b55fd0d649e7b3.png)
 
 
 
@@ -385,5 +385,5 @@ SensorData.msg
 
 另外在公众号《**首飞**》内回复“机器人”获取精心推荐的C/C++，Python，Docker，Qt，ROS1/2等机器人行业常用技术资料。
 
-![](https://gitee.com/shoufei/blog_images/raw/master/shoufei_qr.jpg)
+![公众号](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/shoufei_qr_gongzhonghao.jpg)
 

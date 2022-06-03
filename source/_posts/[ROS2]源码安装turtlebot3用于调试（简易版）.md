@@ -28,7 +28,7 @@ git clone https://ghproxy.com/https://github.com/ROBOTIS-GIT/turtlebot3_simulati
 
 安装vcs
 
-```Apache
+```bash
 sudo apt-get install python3-vcstool
 ```
 

@@ -52,7 +52,7 @@ vscode 中使用snippet的官方文档：
 
 snippet文件的格式如下所示:
 
-```
+```json
 	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
 	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
 	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
@@ -72,7 +72,7 @@ snippet文件的格式如下所示:
 
 需要特别注意的是，$1和$2 是`tabstop`。当我们插入`snippet` 时，光标会自动处于$1的位置。这时可以输入相应的内容。输好后按`tab` 键，光标切换到$2处。`tabstop` 是可以赋默认值的。
 
-```
+```json
 	"Print to console1": {
 		"prefix": "log",
 		"body": [

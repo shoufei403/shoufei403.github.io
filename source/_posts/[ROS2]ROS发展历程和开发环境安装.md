@@ -7,13 +7,10 @@ description: ROS发展历程和开发环境安装
 ---
 
 
-# ROS2养成计划（一）发展历程和开发环境安装
-
-
 
 ## ROS发展历程介绍
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220220195919.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/45e3c2bcb3707f4b6f6a0c2b13e30c6b.png)
 
 
 
@@ -21,7 +18,7 @@ description: ROS发展历程和开发环境安装
 
 2010年5月26日，人类历史上第一个机器人毕业典礼在硅谷这条蜿蜒的柳树街68号的小路旁，临时搭建的一座帐篷中举办。
 
-![](/home/kevin/kevin_blogs/TMP_images/20220220200101.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/ee254b0e4b8fad7310377858fe4bd65c.png)
 
 
 
@@ -89,7 +86,7 @@ ROS最早的原型是在美国**斯坦福大学**的**人工智能实验室**开
 
 
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220220200209.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/a8376a127ccea20ad412c86b589bb51c.png)
 
 
 
@@ -113,7 +110,7 @@ OPF（Open Perception Foundation）：一家非盈利机构，致力于2D/3D 数
 
 
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220220200237.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/879ce21845e9f1ed7bb01a0bfca2cf4f.png)
 
 
 
@@ -143,13 +140,13 @@ Fetch Robotics：由Unbounded Robotics团队重新打造的一款面向仓储物
 
 ROS1版本
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220220200300.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/98c4ca8dc230ac350dee2df3570e87e5.png)
 
 
 
 ROS2的版本
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220220200325.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/948cbb69496ebb3d9d296c956c465ffe.png)
 
 ## ROS2相关网站
 
@@ -199,7 +196,7 @@ Robot Operating System (ROS) 的twitter （需要翻墙）
 
 
 
-![](https://gitee.com/shoufei/blog_images/raw/master/20220220200425.png)
+![img](https://sf-blog-images.oss-cn-hangzhou.aliyuncs.com/72799c0726a72560f9bc8ae0c3037163.png)
 
 ## 开发环境搭建
 
@@ -218,7 +215,7 @@ ros2 run turtlesim turtlesim_node
 
 
 
-```Dockerfile
+```bash
 ros2 run turtlesim turtle_teleop_key
 ```
 
@@ -243,13 +240,13 @@ source ~/.bashrc
 
 启动导航软件
 
-```Apache
+```bash
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True 
 ```
 
 启动仿真环境
 
-```Apache
+```bash
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
@@ -261,25 +258,25 @@ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 
 启动仿真环境
 
-```Shell
+```bash
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
 启动建图程序
 
-```Apache
+```bash
 ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
 ```
 
 启动手动控制程序
 
-```Dockerfile
+```bash
 ros2 run turtlebot3_teleop teleop_keyboard
 ```
 
 地图保存
 
-```Dockerfile
+```bash
 ros2 run nav2_map_server map_saver_cli -f ~/map
 ```
 
@@ -295,7 +292,7 @@ error while loading shared libraries: libspqr.so.2.0.2
 
 解决办法（不太优雅但可行）:
 
-```Apache
+```bash
 cd /usr/lib/x86_64-linux-gnu/
 sudo cp libspqr.so.2.0.9 libspqr.so.2.0.2
 sudo rm libspqr.so
@@ -344,4 +341,3 @@ ROS史话
 
 另外在公众号《**首飞**》内回复“机器人”获取精心推荐的C/C++，Python，Docker，Qt，ROS1/2等机器人行业常用技术资料。
 
-![](https://gitee.com/shoufei/blog_images/raw/master/shoufei_qr.jpg)
