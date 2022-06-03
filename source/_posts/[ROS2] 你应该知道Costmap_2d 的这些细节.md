@@ -3,7 +3,7 @@ title: 你应该知道Costmap_2d 的这些细节 #文章页面上的显示名称
 date: 2022-05-26 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2,Costmap_2d] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: 你应该知道Costmap_2d 的这些细节
+# description: 你应该知道Costmap_2d 的这些细节
 ---
 
 
@@ -26,7 +26,7 @@ Costmap_2d 的插件都是继承于`CostmapLayer`。具体的关系如下图所�
 在`ObservationBuffer` 里存储的历史障碍物数据可以根据想保持的时间来清空。期望保持的时间主要由变量`observation_keep_time_`来决定。如果设置成`rclcpp::Duration(0.0s)`则表示每次都只存储最新的，历史障碍物数据都会被清掉。  
 
 看到这里，有同学可能会想，既然可以以时间为依据来清除障碍物，是不是也可以以其他条件来清除障碍物呢？答案肯定是可以的。这个就需要根据应用场景来选择了。比如：使用机器人的移动距离来作为判断条件。当观测数据时的机器人位置与现在机器人的位置超过多远就把该数据清掉。
-
+<!--more-->
 #### ObstacleLayer
 `ObstacleLayer`内可以加载多种传感器的障碍物观测数据。但是数据类型只支持`PointCloud2` 和 `LaserScan`。其中`LaserScan`类型的数据会被转换成`PointCloud2` 类型数据。因为`ObservationBuffer` 只存储`PointCloud2` 类型数据。  
 

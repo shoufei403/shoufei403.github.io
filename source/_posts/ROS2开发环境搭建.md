@@ -3,7 +3,7 @@ title: ROS2开发环境搭建 #文章页面上的显示名称，一般是中文
 date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: ROS2开发环境搭建
+# description: ROS2开发环境搭建
 ---
 
 ## 开发环境的建立
@@ -15,7 +15,7 @@ description: ROS2开发环境搭建
 [https://fishros.com/d2lros2foxy/#/chapt2/2.1%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85_%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%89%88%E6%9C%AC ](https://fishros.com/d2lros2foxy/#/chapt2/2.1%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85_%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%89%88%E6%9C%AC)
 
 
-
+<!--more-->
 安装VMware Tool
 
 Ubuntu 主机

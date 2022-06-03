@@ -3,8 +3,12 @@ title: launch 文件和多节点进程 #文章页面上的显示名称，一般�
 date: 2022-05-29 10:31:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: ROS2基础之launch文件和多节点进程
+# description: ROS2基础之launch文件和多节点进程
 ---
+
+
+
+
 ## launch 文件
 
 `launch`文件可以同时配置和启动多个`ros`节点。`ROS2`中的`launch`文件可以用`Python`、`xml`、`yaml`来写。  

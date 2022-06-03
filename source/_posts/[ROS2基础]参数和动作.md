@@ -3,7 +3,7 @@ title: ROS2基础之参数和动作 #文章页面上的显示名称，一般是�
 date: 2022-05-26 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: ROS2参数和动作的使用
+# description: ROS2参数和动作的使用
 ---
 
 文本中用于说明的完整示例代码请在下面的仓库中查阅。
@@ -39,7 +39,7 @@ ros2 run <package_name> <executable_name> --ros-args --params-file <file_name>
 ```bash
 ros2 run turtlesim turtlesim_node --ros-args --params-file ./turtlesim.yaml
 ```
-
+<!--more-->
 2. **以`launch`文件的形式启动节点并加载配置文件**
 
 ```python

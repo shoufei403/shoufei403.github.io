@@ -3,7 +3,7 @@ title: ROS2新版本有哪些改进 #文章页面上的显示名称，一般是�
 date: 2022-05-29 10:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: ROS2新版本有哪些改进
+# description: ROS2新版本有哪些改进
 ---
 
 
@@ -34,7 +34,7 @@ description: ROS2新版本有哪些改进
 
 [https://docs.ros.org/en/humble/index.html](https://docs.ros.org/en/humble/index.html)
 
-
+<!--more-->
 
 ---
 

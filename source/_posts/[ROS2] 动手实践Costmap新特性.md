@@ -3,7 +3,7 @@ title: ROS2 动手实践Costmap新特性 #文章页面上的显示名称，一�
 date: 2022-05-26 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2,Costmap] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: 动手实践Costmap新特性
+# description: 动手实践Costmap新特性
 ---
 废话不多说，我们直接开始。
 
@@ -33,7 +33,7 @@ sudo apt-get -y install docker-ce
 # Step 5: 查看docker是否安装成功
 docker version
 ```
-
+<!--more-->
 也可以使用小鱼提供的开源`一键安装`工具。关注小鱼的公众号《鱼香ROS》获取更多信息。  
 
 工具网址：    

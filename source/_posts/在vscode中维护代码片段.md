@@ -3,7 +3,7 @@ title: 在Vscode中维护代码片段 #文章页面上的显示名称，一般�
 date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: 实用技巧 #分类
 tags: [vscode] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: 在vscode中维护代码片段
+# description: 在vscode中维护代码片段
 ---
 
 
@@ -28,7 +28,7 @@ vscode支持非常多编程语言的snippet。通过`ctrl+shift+p` ，打开命�
 
 点击语言名称可以生成相应语言的json文件。这个json文件就是用于维护snippet的。其中的cpp.json和python.json文件就是分别维护相应语言snippet的文件。snippet的内容可以按照语言类别来维护。在编辑器里插入时，vscode会检测当前编辑的是什么语言。当输入snippet的触发词时，只会触发对应语言的snippet。
 
-
+<!--more-->
 
 点击`global snippets file` 时会生成一个全局的`snippet`维护文件。并且其后缀是`.code-snippets` 。该文件中维护的`snippet`可以在任意文本编辑过程中被触发。
 

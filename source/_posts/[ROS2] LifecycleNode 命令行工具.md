@@ -3,7 +3,7 @@ title: ROS2 LifecycleNode 命令行工具 #文章页面上的显示名称，一�
 date: 2022-05-26 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2,LifecycleNode] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: LifecycleNode命令行工具
+# description: LifecycleNode命令行工具
 ---
 
 
@@ -16,6 +16,7 @@ ros2 lifecycle get /lifecycle_node_demo_node
 ```
 其中`/lifecycle_node_demo_node`为节点名称
 
+<!--more-->
 
 ### 设置LifecycleNode节点的状态
 ```bash

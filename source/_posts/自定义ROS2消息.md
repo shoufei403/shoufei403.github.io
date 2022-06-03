@@ -3,7 +3,7 @@ title: 自定义ROS2消息 #文章页面上的显示名称，一般是中文
 date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: 自定义ROS2消息
+# description: 自定义ROS2消息
 ---
 
 这篇文章着重介绍自定义`ROS2`类型数据时，我们可以使用哪些基础类型。这也是我之前困惑的一个问题。所以这里简单汇总说明一下。关于消息、服务和动作接口的使用说明，请查看本次推送的第一篇推文。
@@ -37,7 +37,7 @@ bool use_start # If true, use current robot pose as path start, if false, use st
 # Respond
 nav_msgs/Path path
 ```
-
+<!--more-->
 
 
 ## 自定义action示例

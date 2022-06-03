@@ -3,7 +3,7 @@ title: ROS2 使用LifecycleNode管理节点起停等状态 #文章页面上的�
 date: 2022-05-26 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2,LifecycleNode] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: 使用LifecycleNode管理节点起停等状态
+# description: 使用LifecycleNode管理节点起停等状态
 ---
 
 
@@ -19,7 +19,7 @@ description: 使用LifecycleNode管理节点起停等状态
 
 在这个场景里，大可让建图程序休眠，而不用杀掉。切换功能时只需要激活相应功能的节点即可。
 
-
+<!--more-->
 
 ROS2中引入了节点生命周期管理的概念，正是为了处理上面描述的问题。这项功能的实现需要做下面两件事情。
 

@@ -3,7 +3,7 @@ title: 源码安装turtlebot3用于调试（简易版） #文章页面上的显�
 date: 2022-05-26 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2,turtlebot3] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: 源码安装turtlebot3用于调试（简易版）
+# description: 源码安装turtlebot3用于调试（简易版）
 ---
 
 
@@ -23,7 +23,7 @@ git clone https://ghproxy.com/https://github.com/ROBOTIS-GIT/turtlebot3_simulati
 ```
 
 注意：链接中的[https://ghproxy.com/](https://ghproxy.com/) 为使用代理下载github代码。
-
+<!--more-->
 **可选使用vcs工具下载源码：**
 
 安装vcs

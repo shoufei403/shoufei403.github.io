@@ -3,7 +3,7 @@ title: ROS2 map_server加载地图文件的三种模式 #文章页面上的显�
 date: 2022-05-26 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2,map_server] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: map_server 加载地图文件的三种模式
+# description: map_server 加载地图文件的三种模式
 ---
 
 ## map的数据类型
@@ -56,7 +56,7 @@ int8[] data
 
 `info`成员变量中主要存储地图文件的一些参数。比如：地图大小，分辨率，原点等信息。
 
-
+<!--more-->
 
 ## 加载map的三种模式
 

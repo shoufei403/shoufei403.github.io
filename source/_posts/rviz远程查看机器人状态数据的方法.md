@@ -3,7 +3,7 @@ title: Rviz远程查看机器人状态数据的方法 #文章页面上的显示�
 date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
 categories: ROS2 #分类
 tags: [ROS2] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description: rviz远程查看机器人状态数据的方法
+# description: rviz远程查看机器人状态数据的方法
 ---
 
 ## ROS1环境
@@ -43,7 +43,7 @@ ff02::2 ip6-allrouters
 ```
 `my_laptop` 为笔记本电脑的主机名（由`hostname`命令获取）
 
-
+<!--more-->
 
 **告诉笔记本电脑`ROS_MASTER`的位置**
 
