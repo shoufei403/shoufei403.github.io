@@ -111,5 +111,3 @@ server:
   compress: true
   header: true
 
-netlify_cms:
-  config_file: netlify.yaml
