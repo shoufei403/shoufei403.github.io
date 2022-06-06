@@ -312,6 +312,74 @@ def generate_launch_description():
 ```
 
 
+### 访问launch文件的入口参数
+
+有时我们希望能访问到`launch`文件的入口参数，但是它们通常是`LaunchConfiguration`类型。常见的形式如下：
+
+```python
+use_sim_time = LaunchConfiguration("use_sim_time")
+```
+
+这里的`use_sim_time`是`LaunchConfiguration`类型的，不能直接用于`if`判断。如果你直接按如下方式操作：
+
+```python
+if use_sim_time
+	print(use_sim_time)
+```
+
+通常会打印下面的信息，并且`if`的判句永远是`True`。
+
+```python
+<launch.substitutions.launch_configuration.LaunchConfiguration object at 0x7f26d46805b0>
+```
+
+
+
+我们可以用`OpaqueFunction`函数来处理。下面是一个示例：
+
+```python
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, OpaqueFunction
+from launch.substitutions import LaunchConfiguration
+from launch_ros.actions import Node, SetParameter
+
+
+def launch_setup(context, *args, **kwargs):
+    use_sim_time = LaunchConfiguration("use_sim_time")
+    use_sim_time_str = use_sim_time.perform(context)
+    print(f"use_sim_time: {use_sim_time.perform(context)}")
+    set_use_sim_time = SetParameter(name="use_sim_time", value=use_sim_time)
+
+    node = Node(
+        package="examples_rclcpp_minimal_publisher",
+        executable="publisher_lambda",
+        name="publisher",
+    )
+
+    return [
+        set_use_sim_time,
+        node,
+    ]
+
+
+def generate_launch_description():
+    return LaunchDescription(
+        [
+            DeclareLaunchArgument("use_sim_time", default_value="false"),
+            OpaqueFunction(function=launch_setup),
+        ]
+    )
+```
+
+
+
+其中的`use_sim_time_str = use_sim_time.perform(context)`将参数内容转换为字符串并返回。例如：`use_sim_time`的值是`True`的话，`use_sim_time_str`将是`True`字符串。
+
+参考：
+
+[https://answers.ros.org/question/382028/ros2-string-repr-of-parameter-within-launch-file/](https://answers.ros.org/question/382028/ros2-string-repr-of-parameter-within-launch-file/)
+
+
 
 
 
