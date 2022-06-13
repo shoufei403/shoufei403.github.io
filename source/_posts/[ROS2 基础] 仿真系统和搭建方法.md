@@ -493,7 +493,7 @@ gz sdf -p my_model.urdf > my_model.sdf
 
 ```bash
 <robot name="robot_model"
-  xmlns:xacro="<http://ros.org/wiki/xacro>">
+  xmlns:xacro="http://ros.org/wiki/xacro">
 ```
 
 ### 3. 修改urdf文件来生成sdf文件
