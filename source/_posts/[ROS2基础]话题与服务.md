@@ -1,9 +1,10 @@
 ---
-title: ROS2基础之话题与服务 #文章页面上的显示名称，一般是中文
-date: 2022-05-26 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
-categories: ROS2 #分类
-tags: [ROS2] #文章标签，可空，多标签请用格式，注意:后面有个空格
-# description: ROS2话题与服务的使用
+title: ROS2基础之话题与服务
+categories: ROS2
+tags:
+  - ROS2
+abbrlink: d3409ce6
+date: 2022-05-26 15:30:16
 ---
 
 

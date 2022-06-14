@@ -1,9 +1,10 @@
 ---
-title: Docker简明使用指南 #文章页面上的显示名称，一般是中文
-date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
-categories: Docker #分类
-tags: [Docker] #文章标签，可空，多标签请用格式，注意:后面有个空格
-# description: 快速吧Docker用起来
+title: Docker简明使用指南
+categories: Docker
+tags:
+  - Docker
+abbrlink: fac19c04
+date: 2022-05-02 15:30:16
 ---
 
 对于`Docker`，我只想说早用早享受～

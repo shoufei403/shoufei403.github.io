@@ -1,9 +1,10 @@
 ---
-title: launch 文件和多节点进程 #文章页面上的显示名称，一般是中文
-date: 2022-05-29 10:31:16 #文章生成时间，一般不改，当然也可以任意修改
-categories: ROS2 #分类
-tags: [ROS2] #文章标签，可空，多标签请用格式，注意:后面有个空格
-# description: ROS2基础之launch文件和多节点进程
+title: launch 文件和多节点进程
+categories: ROS2
+tags:
+  - ROS2
+abbrlink: 887e0d61
+date: 2022-05-29 10:31:16
 ---
 
 

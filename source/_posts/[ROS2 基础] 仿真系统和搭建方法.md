@@ -1,9 +1,11 @@
 ---
-title: ROS2基础之仿真系统和搭建方法 #文章页面上的显示名称，一般是中文
-date: 2022-06-12 20:02:16 #文章生成时间，一般不改，当然也可以任意修改
-categories: ROS2 #分类
-tags: [ROS2,Gazebo] #文章标签，可空，多标签请用格式，注意:后面有个空格
-# description: ROS2仿真系统和搭建方法
+title: ROS2基础之仿真系统和搭建方法
+categories: ROS2
+tags:
+  - ROS2
+  - Gazebo
+abbrlink: 749f6c3e
+date: 2022-06-12 20:02:16
 ---
 
 ## 仿真系统简介

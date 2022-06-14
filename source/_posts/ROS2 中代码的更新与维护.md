@@ -1,9 +1,10 @@
 ---
-title: ROS2中代码的更新与维护 #文章页面上的显示名称，一般是中文
-date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
-categories: ROS2 #分类
-tags: [ROS2] #文章标签，可空，多标签请用格式，注意:后面有个空格
-# description: ROS2 中代码的更新与维护方法
+title: ROS2中代码的更新与维护
+categories: ROS2
+tags:
+  - ROS2
+abbrlink: 128206af
+date: 2022-05-02 15:30:16
 ---
 
 

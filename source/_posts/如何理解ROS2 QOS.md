@@ -1,9 +1,10 @@
 ---
-title: 如何理解ROS2 QOS #文章页面上的显示名称，一般是中文
-date: 2022-05-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
-categories: ROS2 #分类
-tags: [QOS] #文章标签，可空，多标签请用格式，注意:后面有个空格
-# description: 一文搞懂ROS2 QOS配置
+title: 如何理解ROS2 QOS
+categories: ROS2
+tags:
+  - QOS
+abbrlink: 8b2be5e2
+date: 2022-05-02 15:30:16
 ---
 
 ROS2的通信中间件换成了`DDS`。这让我们可以精准地控制节点间的通信质量。通信效率也迎来了一次大的提升。  

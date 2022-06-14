@@ -1,9 +1,11 @@
 ---
-title: 源码安装turtlebot3用于调试（简易版） #文章页面上的显示名称，一般是中文
-date: 2022-05-26 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
-categories: ROS2 #分类
-tags: [ROS2,turtlebot3] #文章标签，可空，多标签请用格式，注意:后面有个空格
-# description: 源码安装turtlebot3用于调试（简易版）
+title: 源码安装turtlebot3用于调试（简易版）
+categories: ROS2
+tags:
+  - ROS2
+  - turtlebot3
+abbrlink: 70e5d132
+date: 2022-05-26 15:30:16
 ---
 
 

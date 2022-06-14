@@ -1,9 +1,11 @@
 ---
-title: ROS2 map_server加载地图文件的三种模式 #文章页面上的显示名称，一般是中文
-date: 2022-05-26 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
-categories: ROS2 #分类
-tags: [ROS2,map_server] #文章标签，可空，多标签请用格式，注意:后面有个空格
-# description: map_server 加载地图文件的三种模式
+title: ROS2 map_server加载地图文件的三种模式
+categories: ROS2
+tags:
+  - ROS2
+  - map_server
+abbrlink: 9341ee9
+date: 2022-05-26 15:30:16
 ---
 
 ## map的数据类型
