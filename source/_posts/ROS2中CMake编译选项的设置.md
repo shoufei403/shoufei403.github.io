@@ -35,7 +35,7 @@ add_compile_options(-Wall -Wextra -Wpedantic -Wno-unused-parameter -g)
 | -Wall          | 允许发出gcc提供的所有有用的报警信息    |
 | -Wextra        | 对所有合法但值得怀疑的表达式发出警告   |
 | -Werror        | 把告警信息当做错误信息对待             |
-| -pedantic      | 允许发出ANSI C标准所列的全部警告信息   |
+| -Wpedantic      | 允许发出ANSI C标准所列的全部警告信息   |
 | -w             | 关闭所有警告（不推荐使用）             |
 | -Wfatal-errors | 遇到第一个错误就停止，减少查找错误时间 |
 
