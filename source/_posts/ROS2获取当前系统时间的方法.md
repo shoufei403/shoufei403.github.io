@@ -284,7 +284,25 @@ def generate_launch_description():
 
 **可以发现**，`rclcpp::Clock().now()`，`get_clock()->now()`和`this->now()`获取到的时间与`std::chrono::system_clock::now()`是一致的。
 
-这里需要**注意的一点是**，`rclcpp::Clock().now()`，`get_clock()->now()`和`this->now()`获取到的时间戳均包含`sec`和`nanosec`。`sec`和`nanosec`都描述了当前的时间，是等价的，只是单位不一样。一个是以秒为单位，一个是纳秒为单位。
+这里需要**注意的一点是**，`rclcpp::Clock().now()`，`get_clock()->now()`和`this->now()`获取到的时间戳均包含`seconds()`和`nanoseconds()`方法。`seconds()`和`nanoseconds()`方法都返回了当前的时间，是等价的，只是单位不一样。一个是以秒为单位，一个是纳秒为单位。
+
+```c++
+auto t = this->get_clock()->now()
+
+builtin_interfaces::msg::Time tt = t;
+    
+RCLCPP_INFO(this->get_logger(), "sec: %lf nano: %lf  tt_sec: %ld tt_nano: %ld", t.seconds(), t.nanoseconds(), tt.sec, tt.nanosec);
+```
+
+
+
+但是`ROS2`中的时间类型`builtin_interfaces::msg::Time`是需要把秒和纳秒组合起来才能表示当前时间的。
+
+```c++
+double now_sec = msg->header.stamp.sec + msg->header.stamp.nanosec * 1e-9;
+```
+
+`now_sec`是以秒为单位的时间。
 
 
 
