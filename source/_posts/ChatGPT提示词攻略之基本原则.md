@@ -4,7 +4,7 @@ categories: AIGC
 tags:
   - ChatGPT
   - 提示词
-abbrlink: ae5fa866
+abbrlink: 88c602b6
 date: 2023-06-04 17:30:16
 ---
 
