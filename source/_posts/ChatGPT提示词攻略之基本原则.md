@@ -1,11 +1,11 @@
 ---
-title: ChatGPT提示词攻略之基本原则
+title: ChatGPT提示词攻略(一)之基本原则
 categories: AIGC
 tags:
   - ChatGPT
   - 提示词
 abbrlink: 88c602b6
-date: 2023-06-04 17:30:16
+date: 2023-06-15 17:30:16
 ---
 
 
